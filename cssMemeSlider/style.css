@@ -1,0 +1,137 @@
+.wrapper {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+}
+
+.card {
+    width: 80%;
+    height: 80%;
+    overflow: hidden;
+    /*margin-bottom: 2%;*/
+    margin: 0 auto;
+    position: relative;
+}
+#sliderr {
+    width: 400%; /* Ширина равна 4 раза ширине слайдов, так как у нас 4 слайда */
+    height: 100%;
+    display: flex;
+    transition: 1s;
+}
+
+.meme {
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    display: flex;
+
+}
+.slide{
+    width: 25%; /* Каждый слайд занимает 25% ширины контейнера слайдера */
+    flex-shrink: 0; /* Запрещаем сжатие слайдов */
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+}
+
+#slide1:checked~.card .meme{
+    margin-left: 0;
+}
+
+#slide2:checked~.card .meme{
+    margin-left: -100%;
+}
+
+#slide3:checked~.card .meme {
+    margin-left: -200%;
+}
+
+#slide4:checked~.card .meme {
+    margin-left: -300%;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.name {
+    display: flex;
+    font-family: 'Lucida Sans Regular';
+    font-size: 40px;
+    color: plum;
+}
+
+.slider {
+    display: flex;
+    align-self: flex-end;
+    position: absolute;
+    top: 10px;
+    right: 60px;
+    transform: translateX(-50%);
+}
+
+
+.wrapper label {
+    margin-left: 5%;
+    cursor: pointer;
+    display: flex;
+    height: 6vh;
+    position: relative;
+    width: 7vh;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+
+
+
+label:hover .middle_click {
+    background-color: #ddd;
+}
+
+label:active .center_click {
+    background-color: black;
+}
+
+.middle_click {
+    background-color: plum;
+    height: 70%;
+    width: 70%;
+    border-radius: 100%;
+    transition: 1s;
+    border: transparent solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center_click {
+    background-color: transparent;
+    height: 70%;
+    width: 70%;
+    border-radius: 100%;
+    transition: 1s;
+    border: transparent solid;
+
+}
+
+#slide1:checked~.footer .slider [for='slide1'] .center_click {
+    background-color: black
+}
+
+#slide2:checked~.footer .slider [for='slide2'] .center_click {
+    background-color: black
+}
+
+#slide3:checked~.footer .slider [for='slide3'] .center_click {
+    background-color: black
+}
+
+#slide4:checked~.footer .slider [for='slide4'] .center_click {
+    background-color: black
+}
