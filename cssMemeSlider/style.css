@@ -2,18 +2,21 @@
     background-color: black;
     width: 100vw;
     height: 100vh;
+    padding: 3% auto;
     overflow: hidden;
-    padding: 1%;
 }
 
 .card {
-    width: 80%;
-    height: 80%;
+    width: 60%;
+    height: auto;
+    /*height: 80%;*/
     overflow: hidden;
     /*margin-bottom: 2%;*/
     margin: 0 auto;
     position: relative;
     border: 1px solid plum;
+    margin-bottom: 3%;
+
 }
 
 #sliderr {
@@ -34,13 +37,16 @@
 .slide{
     width: 25%; /* Каждый слайд занимает 25% ширины контейнера слайдера */
     flex-shrink: 0; /* Запрещаем сжатие слайдов */
+   
     
 }
 
 .img {
     width: 100%;
     height: 100%;
+    box-sizing: border-box;
     object-fit: contain;
+    /*object-fit: cover;*/
     
     
 }
@@ -69,7 +75,7 @@
 }
 
 .text_card{
-    width: 40%;
+    width: 100%;
     height: 30%;
     overflow: hidden;
     position: relative;
@@ -117,9 +123,8 @@
 
 .footer {
     display: flex;
-    justify-content: space-between;
-    width: 80%;
-    height: 30%;
+    width: 60%;
+    height: 10%;
     margin: 1% auto 1% auto;
 }
 
@@ -131,7 +136,8 @@
 }
 
 .slider {
-    display: flex;      
+    display: flex;
+    margin-bottom: 0.01%;
 }
 
 .wrapper label {
@@ -201,27 +207,25 @@ input{
 
 @media screen and (max-width:1024px) {
     .footer{
+        width: 80%;
         flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-        height: 17%;
+        height: 11%;
     }
     .slider{
-        margin-bottom: 2%;
+        margin-bottom: 3%;
+        align-items: center;
+        align-self: center;
     }
     .text-slider {
         width: 80%;
-        height: 30%;
-
-        
+        height: 30%;       
     }
     .text_card{
         width: 80%;
-        height: 100%;
-   
-       
+        height: 100%;     
     }
- 
-
- 
+    .card{
+        width: 80%;
+        height: unset;
+    }
 }
