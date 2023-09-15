@@ -2,6 +2,8 @@
     background-color: black;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
+    padding: 1%;
 }
 
 .card {
@@ -11,7 +13,9 @@
     /*margin-bottom: 2%;*/
     margin: 0 auto;
     position: relative;
+    border: 1px solid plum;
 }
+
 #sliderr {
     width: 400%; /* Ширина равна 4 раза ширине слайдов, так как у нас 4 слайда */
     height: 100%;
@@ -26,14 +30,19 @@
     display: flex;
 
 }
+
 .slide{
     width: 25%; /* Каждый слайд занимает 25% ширины контейнера слайдера */
     flex-shrink: 0; /* Запрещаем сжатие слайдов */
+    
 }
 
 .img {
     width: 100%;
     height: 100%;
+    object-fit: contain;
+    
+    
 }
 
 #slide1:checked~.card .meme{
@@ -52,37 +61,86 @@
     margin-left: -300%;
 }
 
+.text-slider {
+    width: 10%;
+    height: 30%;
+    overflow: hidden;
+    position: relative;
+}
+
+.text_card{
+    width: 40%;
+    height: 30%;
+    overflow: hidden;
+    position: relative;
+}
+
+
+#sliderrr {
+    width: 400%; /* Ширина равна 4 раза ширине слайдов, так как у нас 4 слайда */
+    height: 100%;
+    display: flex;
+    transition: 1s;
+}
+.name {
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    display: flex;
+}
+
+.text_slide{
+    width: 25%; /* Каждый слайд занимает 25% ширины контейнера слайдера */
+    flex-shrink: 0; /* Запрещаем сжатие слайдов */
+}
+
+
+/*Текстовые боксики*/
+
+#slide1:checked~.footer .name{
+    margin-left: 0;
+}
+
+#slide2:checked~.footer .name{
+    margin-left: -100%;
+}
+
+#slide3:checked~.footer .name{
+    margin-left: -200%;
+}
+
+#slide4:checked~.footer .name{
+    margin-left: -300%;
+}
+
+
 
 .footer {
     display: flex;
     justify-content: space-between;
-    position: relative;
+    width: 80%;
+    height: 30%;
+    margin: 1% auto 1% auto;
 }
 
 .name {
     display: flex;
     font-family: 'Lucida Sans Regular';
-    font-size: 40px;
+    font-size: 150%;
     color: plum;
 }
 
 .slider {
-    display: flex;
-    align-self: flex-end;
-    position: absolute;
-    top: 10px;
-    right: 60px;
-    transform: translateX(-50%);
+    display: flex;      
 }
-
 
 .wrapper label {
     margin-left: 5%;
     cursor: pointer;
     display: flex;
-    height: 6vh;
+    height: 4vh;
     position: relative;
-    width: 7vh;
+    width: 5vh;
     justify-content: center;
     align-items: center;
     transition: 1s;
@@ -134,4 +192,36 @@ label:active .center_click {
 
 #slide4:checked~.footer .slider [for='slide4'] .center_click {
     background-color: black
+}
+
+input{
+    display: none;
+}
+
+
+@media screen and (max-width:1024px) {
+    .footer{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        height: 17%;
+    }
+    .slider{
+        margin-bottom: 2%;
+    }
+    .text-slider {
+        width: 80%;
+        height: 30%;
+
+        
+    }
+    .text_card{
+        width: 80%;
+        height: 100%;
+   
+       
+    }
+ 
+
+ 
 }
