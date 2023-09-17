@@ -1,0 +1,231 @@
+.wrapper {
+    background-color: black; 
+    padding: 2%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.work{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 70%;
+    align-items: center;
+
+}
+
+.card {
+    width: 100%;
+    height: auto;
+    /*height: 80%;*/
+    overflow: hidden;
+    /*margin-bottom: 2%;*/
+    border: 0.05rem solid plum;
+
+}
+
+#sliderr {
+    width: 400%; /* Ширина равна 4 раза ширине слайдов, так как у нас 4 слайда */
+    height: 100%;
+    display: flex;
+    transition: 1s;
+}
+
+.meme {
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    display: flex;
+
+}
+
+.slide{
+    width: 25%; /* Каждый слайд занимает 25% ширины контейнера слайдера */
+    flex-shrink: 0; /* Запрещаем сжатие слайдов */
+   
+    
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    object-fit: contain;
+    /*object-fit: cover;*/
+    
+    
+}
+
+#slide1:checked~.card .meme{
+    margin-left: 0;
+}
+
+#slide2:checked~.card .meme{
+    margin-left: -100%;
+}
+
+#slide3:checked~.card .meme {
+    margin-left: -200%;
+}
+
+#slide4:checked~.card .meme {
+    margin-left: -300%;
+}
+
+.text-slider {
+    width: 10%;
+    height: 30%;
+    overflow: hidden;
+}
+
+.text_card{
+    margin-top: 1%;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+
+#sliderrr {
+    width: 400%; /* Ширина равна 4 раза ширине слайдов, так как у нас 4 слайда */
+    height: 100%;
+    display: flex;
+    transition: 1s;
+}
+.name {
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    display: flex;
+}
+
+.text_slide{
+    width: 25%; /* Каждый слайд занимает 25% ширины контейнера слайдера */
+    flex-shrink: 0; /* Запрещаем сжатие слайдов */
+}
+
+
+/*Текстовые боксики*/
+
+#slide1:checked~.footer .name{
+    margin-left: 0;
+}
+
+#slide2:checked~.footer .name{
+    margin-left: -100%;
+}
+
+#slide3:checked~.footer .name{
+    margin-left: -200%;
+}
+
+#slide4:checked~.footer .name{
+    margin-left: -300%;
+}
+
+
+
+.footer {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-top: 2%;
+}
+
+.name {
+    display: flex;
+    font-family: 'Lucida Sans Regular';
+    font-size: 150%;
+    color: plum;
+}
+
+.slider {
+    display: flex;
+}
+
+.wrapper label {
+    margin-left: 5%;
+    cursor: pointer;
+    display: flex;
+    height: 4vh;
+    width: 5vh;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+
+
+
+label:hover .middle_click {
+    background-color: #ddd;
+}
+
+label:active .center_click {
+    background-color: black;
+}
+
+.middle_click {
+    background-color: plum;
+    height: 50%;
+    width: 50%;
+    border-radius: 100%;
+    transition: 1s;
+    border: transparent solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center_click {
+    background-color: transparent;
+    height: 70%;
+    width: 70%;
+    border-radius: 100%;
+    transition: 1s;
+    border: transparent solid;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#slide1:checked~.footer .slider [for='slide1'] .center_click {
+    background-color: black
+}
+
+#slide2:checked~.footer .slider [for='slide2'] .center_click {
+    background-color: black
+}
+
+#slide3:checked~.footer .slider [for='slide3'] .center_click {
+    background-color: black
+}
+
+#slide4:checked~.footer .slider [for='slide4'] .center_click {
+    background-color: black
+}
+
+input{
+    display: none;
+}
+
+
+
+@media screen and (max-width:1024px) {
+    .footer{
+        flex-direction: column-reverse;
+    }
+    .slider{
+        margin-top: 2%;
+        margin-bottom: 3%;
+        align-items: center;
+        align-self: center;
+    }
+    .work{
+        width: 80%;
+    }
+    .wrapper{
+        overflow: hidden;
+    }
+
+}
