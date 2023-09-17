@@ -1,7 +1,5 @@
 .wrapper {
-    background-color: black;
-    width: 100vw;
-    height: 100vh;
+    background-color: black; 
     padding: 2%;
     overflow: hidden;
     display: flex;
@@ -12,7 +10,7 @@
     flex-direction: column;
     margin: 0 auto;
     justify-content: space-between;
-    width: 65%;
+    width: 70%;
     align-items: center;
 
 }
@@ -23,7 +21,7 @@
     /*height: 80%;*/
     overflow: hidden;
     /*margin-bottom: 2%;*/
-    border: 1px solid plum;
+    border: 0.05rem solid plum;
 
 }
 
@@ -151,7 +149,6 @@
     cursor: pointer;
     display: flex;
     height: 4vh;
-    position: relative;
     width: 5vh;
     justify-content: center;
     align-items: center;
@@ -187,6 +184,8 @@ label:active .center_click {
     border-radius: 100%;
     transition: 1s;
     border: transparent solid;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -228,14 +227,5 @@ input{
     .wrapper{
         overflow: hidden;
     }
-
-}
-@media screen and (max-width:300px) {
-
-}
-@media screen and (max-width:400px) {
-
-}
-@media screen and (max-width:500px) {
 
 }
